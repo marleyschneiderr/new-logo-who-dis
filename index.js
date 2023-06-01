@@ -13,7 +13,7 @@ inquirer
       // if invalid input is received, an error message is displayed, then the user is prompted again until they put in a correct one
       validate: (input) => {
         if (input.length > 3) {
-          return "Please enter up to three characters/symbols.";
+          return "Please enter up to three characters/symbols:";
         }
         return true;
       },
@@ -21,7 +21,7 @@ inquirer
     {
       type: "input",
       name: "wordColor",
-      message: "Input the color you would prefer your character/symbols to be:",
+      message: "Input the color you would prefer your text to be:",
       validate: (input) => {
         if (!input) {
           return "Please enter a color:";
