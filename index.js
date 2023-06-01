@@ -35,14 +35,14 @@ inquirer
     const { symbols, wordColor, shape, colorShape } = info;
     var svgInstance;
     switch (shape) {
+      case "triangle":
+        svgInstance = new Triangle(colorShape, wordColor, symbols);
+        break;
       case "circle":
         svgInstance = new Circle(colorShape, wordColor, symbols);
         break;
       case "square":
         svgInstance = new Square(colorShape, wordColor, symbols);
-        break;
-      case "triangle":
-        svgInstance = new Triangle(colorShape, wordColor, symbols);
     }
 
     fs.writeFileSync("./examples/logo.svg", svgInstance.render());
