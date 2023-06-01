@@ -7,42 +7,42 @@ inquirer
   .prompt([
     {
       type: "input",
-      name: "characters",
-      message: "Please enter up to 3 letters/characters:",
+      name: "symbols",
+      message: "Please enter up to three characters/symbols:",
     },
 
     {
       type: "input",
-      name: "textColor",
-      message: "Please enter the color you would like your characters to be:",
+      name: "wordColor",
+      message: "Input the color you would prefer your character/symbols to be:",
     },
 
     {
       type: "list",
       name: "shape",
       message: "Select a specific shape for you logo:",
-      choices: ["circle", "square", "triangle"],
+      choices: ["triangle", "circle", "square"],
     },
 
     {
       type: "input",
-      name: "shapeColor",
-      message: "Please enter the color you would like your shape to be:",
+      name: "colorShape",
+      message: "Input the color you would prefer your shape to be:",
     },
   ])
 
-  .then((data) => {
-    const { characters, textColor, shape, shapeColor } = data;
+  .then((info) => {
+    const { symbols, wordColor, shape, colorShape } = info;
     var svgInstance;
     switch (shape) {
       case "circle":
-        svgInstance = new Circle(shapeColor, textColor, characters);
+        svgInstance = new Circle(colorShape, wordColor, symbols);
         break;
       case "square":
-        svgInstance = new Square(shapeColor, textColor, characters);
+        svgInstance = new Square(colorShape, wordColor, symbols);
         break;
       case "triangle":
-        svgInstance = new Triangle(shapeColor, textColor, characters);
+        svgInstance = new Triangle(colorShape, wordColor, symbols);
     }
 
     fs.writeFileSync("./examples/logo.svg", svgInstance.render());
