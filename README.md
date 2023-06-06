@@ -9,6 +9,7 @@ A Node.js command-line application that takes in user input to generate a logo a
 
 ## Screenshot of Live Application📂
 ![alt-text](./images/svg-terminal.png)
+![alt-text](./images/LogoExample1.png)
 
 ## Table of Contents
 * [Installation](#installation)
