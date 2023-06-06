@@ -66,5 +66,5 @@ inquirer
     console.log("Logo generated successfully!!");
   })
   .catch((error) => {
-    console.error("An error occurred while creating the logo:", error);
+    console.error("An error occurred while creating your logo:", error);
   });
