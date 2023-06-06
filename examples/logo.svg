@@ -1,3 +1,3 @@
 <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-    <circle points="150,100 80" fill="Blue" />
-    <text x="150" y="125" font-size="60" text-anchor="middle" fill="Orange">M:)</text></svg>
+    <rect points="10,10 200,200" fill="Red" />
+    <text x="150" y="125" font-size="60" text-anchor="middle" fill="Orange">LOL</text></svg>
